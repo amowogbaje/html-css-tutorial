@@ -1,0 +1,58 @@
+/*Note all the href tags area appearing blue this is because this is their default colour, now we will start styling them one after the other*/
+.body-dark {
+	background-color: #333;
+	color: white;
+	/*we will add this class to the body tag, everything changed except for ther links which still appears blue
+	You can change the class in the body to body-grey, body-white and check how powerful our css classes can be
+	For now we will stick to body-white to ease development
+	*/
+}
+
+.body-grey {
+	background-color: #999;
+	color: white;
+}
+.body-grey footer {
+	background-color: #666;
+}
+
+.body-white {
+	background-color: #fff;
+	color: black;
+}
+
+
+header {
+	background-color: rgba(51,51,51, 0.7);
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+}
+
+header a:hover {
+	color: #cd022d;
+	text-decoration: none;
+}
+.nav-menu ul {
+	display: flex;
+	list-style: none;
+	padding: none;
+	margin: none;
+
+}
+
+.nav-menu ul li {
+	padding: 0.2em;
+	margin: 0.2em;
+	font-size: large;
+	/*font-family: Tahoma;*/
+	font-weight: bolder;
+}
+
+
+.nav-menu ul li:hover {
+	border-bottom: orange solid 1px;
+	transition: all 0.3s linear;
+}
