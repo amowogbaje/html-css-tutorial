@@ -1,0 +1,135 @@
+/*@font-face {
+	font-family: lato;
+	src: url(../vendor/Lato/fonts/Lato-Black.woff2);
+}*/
+
+.body-dark {
+	background-color: #333;
+	color: white;
+}
+.body-dark footer {background-color: #000}
+.body-grey {
+	background-color: #999;
+	color: white;
+}
+.body-grey footer {
+	background-color: #666;
+}
+
+.body-white {
+	background-color: #fff;
+	color: black;
+}
+body{
+	font-family: LatoWeb;
+}
+
+header {
+	background-color: rgba(51,51,51, 0.7);
+}
+header a {
+	color: white;
+	text-decoration: none;
+}
+
+header a:hover {
+	color: white;
+	text-decoration: none;
+}
+.nav-menu ul {
+	padding: none;
+	margin: none;
+
+}
+
+.nav-menu ul li {
+	padding: 0.2em;
+	margin: 0.2em;
+	font-size: large;
+	/*font-family: Tahoma;*/
+	font-weight: bolder;
+}
+
+
+.nav-menu ul li:hover {
+	border-bottom: orange solid 1px;
+}
+.get-started-btn {
+	border-radius: 6px;
+	background-color: transparent;
+	border: white solid 1px;
+	color: white;
+}
+.get-started-btn:hover {
+		background-color: rgba(161, 002, 41, 0.6)
+}
+
+.nav-social-links ul {
+	list-style: none;
+	display: inline-flex;
+}
+.nav-social-links li a span {color: white}
+
+#home {
+	background: url("../img/it/code-wallpaper.jpg") top center;
+	background-size: cover;
+}
+main section.bio {
+	height: 576px;
+	/*background-color: black;*/
+}
+@media (max-width: 576px) {
+	main section.bio {
+		height: 300px;
+		/*background: url("../img/gideon-bg.jpg") top center;*/
+		/*background-color: black;*/
+	}
+}
+
+.box {
+	padding: .5em;
+	border: solid #ccc thin;
+	color: black;
+	background-color: white;
+	width: 10em;
+	height: 5em;
+	margin: .6em;
+	text-align: center;
+}
+.nav-social-links{
+	font-size: xx-large;
+}
+
+.nav-social-links li{
+	padding: .5em;
+/*	padding-left: .3em;
+	padding-right: .3em;*/
+}
+.search-btn, .form-control {
+	border-radius: 1px;
+	border: none;
+	color: #fff;	
+}
+.search-btn {
+	background-color: rgba(161, 002, 41, 1.0);
+}
+.search-btn:hover {background-color: rgba(161, 002, 41, 0.9);}
+.form-addon{ background-color: #fff; }
+.bx-current-location {
+	background-color: #fff;
+	border-right: solid #ccc thin;
+}
+.wine {
+	color: #cd022d;
+	/*color: rgba(161, 002, 41, 0.5);*/
+}
+/*.search-btn:hover {background-color: transparent; color: #cd022d}*/
+
+#services {
+	/*background-color: #333;*/
+	/*color: white;*/
+}
+
+footer {
+	background-color: #333; 
+}

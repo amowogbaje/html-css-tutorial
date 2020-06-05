@@ -12,6 +12,7 @@
 	background-color: #999;
 	color: white;
 }
+
 .body-grey footer {
 	background-color: #666;
 }
@@ -40,7 +41,6 @@ header a:hover {
 	list-style: none;
 	padding: none;
 	margin: none;
-
 }
 
 .nav-menu ul li {
