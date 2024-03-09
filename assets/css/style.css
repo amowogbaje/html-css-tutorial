@@ -134,3 +134,24 @@ main section.bio {
 footer {
 	background-color: #333; 
 }
+
+.menu-item .menu-img {
+    padding: 0 60px;
+    margin-bottom: 15px;
+	max-height: 100%	;
+    width: auto;
+}
+
+ .menu-item {
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+
+.menu-img-container {
+    height: 200px; /* Specify the desired height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide any overflowing content */
+}
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>HTML, CSS Demo</title>
 	<link rel="stylesheet" type="text/css" href="assets/vendor/boxicons/css/boxicons.css">
@@ -9,7 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="assets/vendor/Lato/latostyle.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
-<body class="body-dark">
+
+<body>
 	<header id="header" class="fixed-top px-2">
 		<div class="container-fluid align-items-center d-flex justify-content-between">
 			<h1 id="logo"><a href="index.html">Mayor Foods</a></h1>
@@ -20,11 +22,11 @@
 					<li><a href="#services">Services</a></li>
 				</ul>
 			</nav>
-			<button class="get-started-btn px-3 py-1 d-xs-none">Get Started</button>	
+			<button class="get-started-btn px-3 py-1 d-xs-none">Get Started</button>
 		</div>
-		
+
 	</header>
-	<main class="m-2 mt-5 p-2">
+	<main class="mt-5">
 		<section id="home" class="bio d-block d-flex flex-column align-items-start justify-content-end p-3">
 			<h1 style="color: white">Mayor Foods</h1>
 
@@ -48,23 +50,11 @@
 				</nav>
 			</div>
 		</section>
-		<section id="services" class="bio d-flex flex-row justify-content-center my-0">
-			<div class="d-flex flex-column m-2 p-2 col-sm-3 align-items-center">
-				<h4 class="mb-2">Small Fruit Salads</h4>
-				<img src="assets/img/fruit-salad.jpg" class="img img-fluid">
-				<p class="my-3">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
+
+		<section class="my-4">
+			<div id="menu-items" class="row gy-5">
+				<!-- Menu Items will be dynamically generated here -->
 			</div>
-			<div class="d-flex flex-column m-2 p-2 col-sm-3 align-items-center">
-				<h4 class="mb-2">Delicious Foods</h4>
-				<img src="assets/img/fruit-black.png" class="img img-fluid">
-				<p class="my-3">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-			</div>
-			<div class="d-flex flex-column m-2 p-2 col-sm-3 align-items-center">
-				<h4 class="mb-2">Small Chops</h4>
-				<img src="assets/img/small-chops-2.jpeg" class="img img-fluid">
-				<p class="my-3">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-			</div>
-			
 		</section>
 		<!-- <section class="offers d-flex flex-row justify-content-center align-items-end">
 			<div class="box">Personal Life</div>
@@ -76,5 +66,155 @@
 	<footer class="d-flex justify-content-center p-3 size20">
 		&copy MayorFood
 	</footer>
+
+	<script>
+		// Define menu item data in JSON format
+		var menuItems = [
+			{
+				"imageSrc": "assets/img/food1.jpg",
+				"name": "Spaghetti Carbonara",
+				"ingredients": "Pasta, eggs, bacon, cheese, black pepper",
+				"price": "$10.99"
+			},
+			{
+				"imageSrc": "assets/img/food2.jpg",
+				"name": "Margherita Pizza",
+				"ingredients": "Pizza dough, tomato sauce, mozzarella cheese, basil",
+				"price": "$12.95"
+			},
+			{
+				"imageSrc": "assets/img/food3.jpg",
+				"name": "Caesar Salad",
+				"ingredients": "Romaine lettuce, croutons, Parmesan cheese, Caesar dressing",
+				"price": "$8.50"
+			},
+			{
+				"imageSrc": "assets/img/food4.jpg",
+				"name": "Grilled Salmon",
+				"ingredients": "Salmon fillet, lemon, olive oil, garlic, herbs",
+				"price": "$16.99"
+			},
+			{
+				"imageSrc": "assets/img/food5.png",
+				"name": "Chicken Tikka Masala",
+				"ingredients": "Chicken, yogurt, tomatoes, spices, cream",
+				"price": "$14.95"
+			},
+			{
+				"imageSrc": "assets/img/food6.avif",
+				"name": "Sushi Rolls",
+				"ingredients": "Rice, seaweed, fish, vegetables, soy sauce",
+				"price": "$18.50"
+			},
+			{
+				"imageSrc": "assets/img/food7.jpg",
+				"name": "Hamburger",
+				"ingredients": "Beef patty, lettuce, tomato, onion, cheese, bun",
+				"price": "$9.99"
+			},
+			{
+				"imageSrc": "assets/img/food8.avif",
+				"name": "Veggie Wrap",
+				"ingredients": "Tortilla wrap, hummus, vegetables, avocado",
+				"price": "$7.95"
+			},
+			{
+				"imageSrc": "assets/img/food9.jpg",
+				"name": "Beef Stir-Fry",
+				"ingredients": "Beef strips, vegetables, soy sauce, garlic, ginger",
+				"price": "$12.50"
+			},
+			{
+				"imageSrc": "assets/img/food10.jpg",
+				"name": "Mushroom Risotto",
+				"ingredients": "Arborio rice, mushrooms, onion, garlic, white wine",
+				"price": "$11.99"
+			},
+			{
+				"imageSrc": "assets/img/food11.webp",
+				"name": "Chocolate Cake",
+				"ingredients": "Flour, sugar, cocoa powder, eggs, butter, milk",
+				"price": "$6.95"
+			},
+			{
+				"imageSrc": "assets/img/food12.webp",
+				"name": "Caprese Salad",
+				"ingredients": "Tomatoes, mozzarella cheese, basil, olive oil, balsamic glaze",
+				"price": "$9.50"
+			},
+			// {
+			// 	"imageSrc": "assets/img/food13.jpg",
+			// 	"name": "Beef Tacos",
+			// 	"ingredients": "Beef, tortillas, lettuce, tomato, cheese, salsa",
+			// 	"price": "$8.99"
+			// },
+			// {
+			// 	"imageSrc": "assets/img/food14.jpg",
+			// 	"name": "Pad Thai",
+			// 	"ingredients": "Rice noodles, shrimp, tofu, bean sprouts, peanuts",
+			// 	"price": "$10.95"
+			// },
+			// {
+			// 	"imageSrc": "assets/img/food15.jpg",
+			// 	"name": "Greek Salad",
+			// 	"ingredients": "Lettuce, cucumber, tomatoes, olives, feta cheese, olive oil",
+			// 	"price": "$7.50"
+			// },
+			// {
+			// 	"imageSrc": "assets/img/food16.jpg",
+			// 	"name": "Vegetable Curry",
+			// 	"ingredients": "Mixed vegetables, curry paste, coconut milk, spices",
+			// 	"price": "$11.50"
+			// },
+			// {
+			// 	"imageSrc": "assets/img/food17.jpg",
+			// 	"name": "Eggplant Parmesan",
+			// 	"ingredients": "Eggplant, breadcrumbs, marinara sauce, mozzarella cheese",
+			// 	"price": "$13.99"
+			// },
+			// {
+			// 	"imageSrc": "assets/img/food18.jpg",
+			// 	"name": "Shrimp Scampi",
+			// 	"ingredients": "Shrimp, garlic, butter, lemon juice, parsley",
+			// 	"price": "$15.50"
+			// },
+			// {
+			// 	"imageSrc": "assets/img/food19.jpg",
+			// 	"name": "Beef Burger",
+			// 	"ingredients": "Beef patty, lettuce, tomato, onion, cheese, bun",
+			// 	"price": "$10.99"
+			// },
+			// {
+			// 	"imageSrc": "assets/img/food20.jpg",
+			// 	"name": "Pasta Primavera",
+			// 	"ingredients": "Pasta, mixed vegetables, olive oil, garlic, Parmesan cheese",
+			// 	"price": "$9.95"
+			// }
+		]
+
+
+		// Function to generate HTML for menu items
+		function generateMenuItems(menuItems) {
+			var menuItemsHtml = '';
+			menuItems.forEach(function (item) {
+				menuItemsHtml += `
+            <div class="col-md-4 col-sm-6 menu-item">
+                <a href="${item.imageSrc}" class="glightbox">
+                    <div class="menu-img-container">
+                        <img src="${item.imageSrc}" class="menu-img img-fluid" alt="">
+                    </div>
+                </a>
+                <h4>${item.name}</h4>
+                <p class="ingredients">${item.ingredients}</p>
+                <p class="price">${item.price}</p>
+            </div>`;
+			});
+			return menuItemsHtml;
+		}
+		// Generate menu items HTML and append it to the container
+		document.getElementById('menu-items').innerHTML = generateMenuItems(menuItems);
+	</script>
+
 </body>
+
 </html>
