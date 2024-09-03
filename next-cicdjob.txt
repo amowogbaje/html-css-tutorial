@@ -1,0 +1,58 @@
+name: DEV CICD
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build-and-deploy:
+    runs-on: [self-hosted,langlearn_fe_runners_3]
+
+    steps:
+      
+    - name: Update repo and build
+      run: |
+       cd /home/bulldozer/language_learning_fe
+       git pull
+       pnpm install
+       latest_version=$(git describe --tags git rev-list --tags --max-count=1)
+       sed -i "s/^NEXT_PUBLIC_VERSION=.*/NEXT_PUBLIC_VERSION=$latest_version/" .env
+       pnpm build
+       cd /home/bulldozer/
+       tar -czvf next.tar.gz language_learning_fe/.next
+
+       
+    - name: Transfer Build Artifacts to Server
+      run: |
+        sshpass -p "${{ secrets.SSH_PASSWORD }}" scp /home/bulldozer/next.tar.gz ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/delve-fe
+        rm /home/bulldozer/next.tar.gz
+        
+        
+    
+
+          
+    - name: Deploy to server
+      uses: appleboy/ssh-action@master
+      with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            echo "About to Deploy"
+            cd /var/www/delve-fe
+            tar -xzvf next.tar.gz -C .
+            rm next.tar.gz
+            rm -rf dev/.next
+            mv language_learning_fe/.next dev
+            rm -rf language_learning_fe
+            cd /var/www/delve-fe/dev
+            git reset --hard origin/dev
+            git pull
+            latest_version=$(git describe --tags git rev-list --tags --max-count=1)
+            sed -i "s/^NEXT_PUBLIC_VERSION=.*/NEXT_PUBLIC_VERSION=$latest_version/" .env
+            pm2 restart staging.delve.fun --update-env 
+
+
+
+Frontend deployment workflow
